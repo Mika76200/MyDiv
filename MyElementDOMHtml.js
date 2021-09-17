@@ -4,7 +4,7 @@ var EnumMyElementDOMHtml =
 	defaultBorderRadius: "5"
 }
 
-
+//hhhhhhhhhhhhh
 class MyElementDOMHtml extends MyEvent
 {
 		constructor()
