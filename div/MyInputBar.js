@@ -9,7 +9,7 @@ class MyInputButtonBar extends MyInsideDivVertical
 	addButton(textButton,Color,CALLBACK)
 	{
 		this.anchorButton = new MyAnchorBouttonInputBar('anchorBotton_'+textButton,textButton,textButton);
-		this.anchorButton.setColorText(Color);
+		this.anchorButton.setColorText(ColorAnchorAction.getColor());
 		this.anchorButton.addEventListener('click',()=>{CALLBACK();});
 		this.addInput(this.anchorButton);
 	}
@@ -55,6 +55,14 @@ class MyInputButtonBarV extends MyInputButtonBar
 /////////////////////////////////////
 class MyInputButtonDialBar extends MyInputButtonBarH
 {
+	constructor(newID,textOKButton,CALLBACK,parent)
+	{
+		super(newID,parent);
+		this.addButton(textOKButton,ColorAnchorActionConfirm.getColor(),CALLBACK);
+	}
+}
+class MyInputButtonAutoDialBar extends MyInputButtonBarH
+{
 	constructor(newID,parent)
 	{
 		super(newID,parent);
@@ -66,7 +74,7 @@ class MyInputButtonDialBar extends MyInputButtonBarH
 
 }
 ////////////////////////////////
-class MyInputButtonConfirmBar extends MyInputButtonDialBar
+class MyInputButtonConfirmBar extends MyInputButtonAutoDialBar
 {
 	constructor(newID,parent)
 	{

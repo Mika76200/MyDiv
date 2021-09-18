@@ -98,7 +98,7 @@ class MyInput extends MyElementDOMHtml
 
 class MyInputLabel extends MyDiv
 {
-	constructor(newID,type,nameLabet,value)
+	constructor(newID,type,nameLabet,value,rangerText)
 	{
 		super(newID);
 		this.setStyle("display: inline-block;");
@@ -115,7 +115,7 @@ class MyInputLabel extends MyDiv
 			if(type === 'email'){this.input = new MyInputEmail(newID);}
 			if(type === 'password'){this.input = new MyInputPassWord(newID);}
 			if(type === 'checkBox'){this.input = new MyInputCheckBox(newID,true);}
-			if(type === 'ranger'){this.input = new MyInputRange(newID,500,0,value,this.label);this.label.setValue(AutoLanguage.searchDistance+value+AutoLanguage.searchUnit);}
+			if(type === 'ranger'){this.input = new MyInputRange(newID,500,0,value,this.label);this.label.setValue(rangerText);}
 		}
 		else
 		{
@@ -439,7 +439,7 @@ class MyInputNumber extends MyInput
 ///////////////////////////////////////////////
 class MyInputRange extends MyInput
 {
-	constructor(newID, newMax ,newMin,value,label)
+	constructor(newID, newMax ,newMin,value,label,rangerText)
 	{
 		super(newID);
 		this.element.type = 'range';
@@ -449,7 +449,6 @@ class MyInputRange extends MyInput
 		if(label)
 		{
 			this.refLabel = label;
-			this.addEventListener('change',()=>{ label.setValue(AutoLanguage.searchDistance+this.getValue()+AutoLanguage.searchUnit);});
 		}
 	}
 }
