@@ -60,7 +60,77 @@ class MyElementDOMHtml extends MyEvent
 		{
 			return this.element.childNodes;
 		}
+		inserDivElementDOM(elementDOM,justify)
+		{
+			if(!justify)
+			{
+				this.element.appendChild(elementDOM);
+			}
+			else
+			{
+				elementDOM.style.justifyContent = justify;
+				this.element.appendChild(elementDOM);
 
+			}
+		}
+		inserSpam(spam,justify)
+		{
+				this.inserElementDOM(spam.getElement(),justify);
+		}
+		inserImage(image,justify)
+		{
+				this.inserElementDOM(image.getElement(),justify);
+		}
+		inserAnchor(anchor,justify)
+		{
+				this.inserElementDOM(anchor.getElement(),justify);
+		}
+		deleteAnchor(anchor,justify)
+		{
+				this.deleteElementDOM(anchor);
+		}
+		inserHeader(header,justify)
+		{
+				this.inserElementDOM(header.getElement(),justify);
+		}
+		inserInput(input,justify)
+		{
+				this.inserElementDOM(input.getElement(),justify);
+		}
+		addInput(input,justify)
+		{
+				this.inserElementDOM(input.getElement(),justify);
+		}
+		inserTextArea(textArea,justify)
+		{
+				this.inserElementDOM(textArea.getElement(),justify);
+		}
+		inserDiv(div,justify)
+		{
+				this.inserDivElementDOM(div.getElement(),justify);
+		}
+		inserElement(element,justify)
+		{
+				this.inserElementDOM(element.getElement(),justify);
+		}
+		inserButtonBar(bouttonBar,justify)
+		{
+				this.inserElementDOM(bouttonBar.getElement(),justify);
+		}
+		inserSeparatorHorizontal()
+		{
+				var separator = new MySeparatorHorizontal('separator'+this.element.id,'1px','100%');
+						this.inserSeparator(separator);
+		}
+		inserSeparatorVertical()
+		{
+				var separator = new MySeparatorVertical('separator'+this.element.id,'100%','2px');
+						this.inserSeparator(separator);
+		}
+		inserSeparator(div,justify)
+		{
+				this.inserElementDOM(div.getElement(),justify);
+		}
 		removeFirstChild()
 		{
 			if(this.hasChildNodes())

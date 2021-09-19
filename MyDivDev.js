@@ -3,7 +3,7 @@ function addFile(wayFile)
   document.write('<script type="text/JavaScript" src="'+wayFile+'"></script>');
 }
 // common
-addFile("/MyDiv/AutoLanguageMyDiv/AutoLanguageMyDiv.js");
+addFile("/MyDiv/autolanguage/AutoLanguageMyDiv.js");
 addFile("/MyDiv/common/module.js");
 addFile("/MyDiv/common/color.js");
 addFile("/MyDiv/common/config.js");
@@ -46,6 +46,11 @@ addFile("/MyDiv/overlay/MyDivThumbnail.js");
 addFile("/MyDiv/overlay/MyBigOverlay.js");
 addFile("/MyDiv/overlay/MySmallThumbnailOverlay.js");
 addFile("/MyDiv/overlay/MySmallOverlay.js");
-
 // en dernier
 addFile("/MyDiv/div/MyAnchor.js");
+
+// demo
+addFile("/MyDiv/div/demo/MyDivViod.js");
+addFile("/MyDiv/div/demo/MyDivDemo.js");
+addFile("/MyDiv/div/demo/MyDivFullElement.js");
+addFile("/MyDiv/div/demo/MyDivEvent.js");
