@@ -18,4 +18,19 @@ class MyDeviceManager
     }
     return false;
   }
+  static getBrowser()
+  {
+    this.browser = navigator.appCodeName || "An unknown browser";
+    return this.browser;
+  }
+  static getversion()
+  {
+    this.version = navigator.appVersion || "an unknown version";
+    return this.version;
+  }
+  static getOS()
+  {
+    this.OS = navigator.platform || "an unknown OS";
+    return this.OS;
+  }
 }
