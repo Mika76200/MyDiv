@@ -89,6 +89,10 @@ class MyInput extends MyElementDOMHtml
 		{
 			this.setStyle("border:solid 1px gray;");
 		}
+		cleanValue()
+		{
+			this.setValueNoFilter('');
+		}
 
 
 }
@@ -385,9 +389,8 @@ class MyInputEmail extends MyInput
 {
 	constructor(newID)
 	{
-		super(newID);
+		super(newID,"Email");
 		this.element.type = 'email';
-		this.setPlaceHolder("Email");
 	}
 }
 ////////////////////////////////////////////////////////
@@ -395,9 +398,8 @@ class MyInputPassWord extends MyInput
 {
 	constructor(newID)
 	{
-		super(newID);
+		super(newID,"**********");
 		this.element.type = 'password';
-		this.setPlaceHolder("********");
 	}
 }
 /////////////////////////////////////////////////////

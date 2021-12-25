@@ -66,3 +66,12 @@ class MyHeader extends MyElementDOMHtml
 		 	this.element.addEventListener(eventTags, funct);
 		}
 }
+////////////////////////////////////////////////
+class MyHeaderDiv extends MyHeader
+{
+	constructor(newID,text,categorie)
+	{
+		super(newID,text,categorie);
+    this.setBackGroundColor(BackGroundDivHeaderOverlay.getColor());
+	}
+}

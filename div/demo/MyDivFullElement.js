@@ -8,8 +8,7 @@ class MyDivFullElement extends MyDisplayDivVertical
     super("MyDivFullElement.js",parent);
     this.setSize(400,400);
 
-    this.divHeader = new MyHeader('header_div','MyDivFullElement',4,parent);
-    this.divHeader.setBackGroundColor(BackGroundDivHeaderOverlay.getColor());
+    this.divHeader = new MyHeaderDiv('header_div','MyDivFullElement',4,parent);
 
     this.content = new MyInsideDivVertical('newInside',this);
     this.content.setDefaultMargin(10);

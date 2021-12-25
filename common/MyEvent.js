@@ -1,5 +1,5 @@
 
-
+// class mere de MyElementDOMHtml
 class MyEvent
 {
   constructor()
@@ -16,7 +16,7 @@ class MyEvent
   }
   addEventKeyEnter(CALLBACK)
   {
-    this.addEventKeyEnter('enter',CALLBACK);
+    this.addEventKey('enter',CALLBACK);
   }
   addEventKey(key,CALLBACK)
   {

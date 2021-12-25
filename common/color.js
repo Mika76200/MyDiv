@@ -88,6 +88,7 @@ var ColorBorderDivFile = MyColorGray;
 	var ColorAnchorAction = MyColorBleu;
 	var ColorAnchorActionConfirm = MyColorGreen;
 	var ColorAnchorActionCancel = MyColorRed;
+	var ColorAnchorActionSend = MyColorGreen;
 	var ColorAnchorActionMiniCancel = MyColorGray2;
 	var ColorTextIconAnchor = MyColorGray;
 /////// les anchor de la footbar

@@ -7,11 +7,11 @@ addFile("/MyDiv/autolanguage/AutoLanguageMyDiv.js");
 addFile("/MyDiv/common/module.js");
 addFile("/MyDiv/common/color.js");
 addFile("/MyDiv/common/config.js");
+addFile("/MyDiv/common/MyEvent.js");
 addFile("/MyDiv/common/MyScreemManager.js");
 addFile("/MyDiv/common/MyDeviceManager.js");
 
 // MyDiv
-addFile("/MyDiv/div/MyEvent.js");
 addFile("/MyDiv/div/MyElementDOMHtml.js");
 addFile("/MyDiv/div/MyDiv.js");
 addFile("/MyDiv/div/MyButton.js");
@@ -32,6 +32,14 @@ addFile("/MyDiv/div/MyTextArea.js");
 addFile("/MyDiv/div/Paragraphe.js");
 addFile("/MyDiv/div/MyEmoji.js");
 addFile("/MyDiv/div/MyOnglet.js");
+
+//netword
+addFile("/MyDiv/network/Connect.js");
+addFile("/MyDiv/network/ConnexionManager.js");
+addFile("/MyDiv/network/request.js");
+addFile("/MyDiv/network/Xhr.js");
+addFile("/MyDiv/network/XhrTest.js");
+
 // overlay
 addFile("/MyDiv/overlay/MyAbstraictContentDivOverlayThumbnail.js");
 addFile("/MyDiv/overlay/MyAbstraictContentDivSmallOverlayThumbnail.js");
