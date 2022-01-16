@@ -15,7 +15,19 @@ if(language.includes("fr"))
 {
   var AutoLanguageMyDiv = {
 
-            currentLanguage: "fr"
+            currentLanguage: "fr",
+            defaultOption:"...",
+            headerDivError:"Une erreur est survenue !",
+            textError:"Une erreur est survenue!",
+            errorSelect :" vous n'avez rien selectionné",
+            textReconnect:" vous avez été déconnecté veulliez-vous reconnecter",
+            unauthorized: " Vous n'êtes pas autorisé à effectuer cette requête",
+            unauthorizedPageOrNoFound: "<spam style='margin: 10px;'> Vous n'êtes pas autorisé à consulter cette page ou cette page est inexistante </spam>",
+            confirm:"Comfirmer",
+            cancel:"Annuler",
+            delete:"Supprimer",
+            deleted:"Supprimé"
+
 
   };
 }

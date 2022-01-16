@@ -12,7 +12,7 @@ class MyDivConfirm extends MyOverlayVertical
 			this.content = content;
 		}
 
-		this.inputButtonBar = new MyInputButtonAutoConfig('input_bar_'+newID,new TypeInput('ConfirmBar',AutoLanguage.confirm,AutoLanguage.cancel),
+		this.inputButtonBar = new MyInputButtonAutoConfig('input_bar_'+newID,new TypeInput('ConfirmBar',AutoLanguageMyDiv.confirm,AutoLanguageMyDiv.cancel),
 																											()=>{CALLBACKConfirm();this.closeMe();},()=>{this.closeMe();},this);
 
 		this.inserDivToOverlay(this.divHeader);

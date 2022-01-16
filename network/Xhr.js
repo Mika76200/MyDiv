@@ -60,6 +60,10 @@ class Xhr
   {
 
   }
+  send()
+  {
+      this.xhr.send('');
+  }
   sendForm(form)
   {
       this.xhr.send(form);
@@ -138,24 +142,24 @@ class Xhr
         }
         else
         {
-          var divError = new MyDivErrorReconnect(AutoLanguage.headerError,new MyDivContentErrorReconnect(),parent);
+          var divError = new MyDivErrorReconnect(AutoLanguageMyDiv.headerError,new MyDivContentErrorReconnect(),parent);
         }
       });
 
     }
     else if(reponse['error'] === '0Ex0014')
     {
-      var divError = new MyDivError(AutoLanguage.headerError,new Paragraphe('',AutoLanguage.unauthorized),parent);
+      var divError = new MyDivError(AutoLanguageMyDiv.headerError,new Paragraphe('',AutoLanguageMyDiv.unauthorized),parent);
     }
 
     else if(reponse['error'] === '0Ex0015')
     {
       var divError = document.getElementById("centre");
-          divError.innerHTML = AutoLanguage.unauthorizedPageOrNoFound;
+          divError.innerHTML = AutoLanguageMyDiv.unauthorizedPageOrNoFound;
     }
     else
     {
-        var divError = new MyDivError(AutoLanguage.headerError,new MyDivContentError(this.xhr.status,this.xhr.statusText,reponse['error']),parent);
+        var divError = new MyDivError(AutoLanguageMyDiv.headerError,new MyDivContentError(this.xhr.status,this.xhr.statusText,reponse['error']),parent);
     }
   }
 }

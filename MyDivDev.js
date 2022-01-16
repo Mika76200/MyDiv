@@ -10,10 +10,12 @@ addFile("/MyDiv/common/config.js");
 addFile("/MyDiv/common/MyEvent.js");
 addFile("/MyDiv/common/MyScreemManager.js");
 addFile("/MyDiv/common/MyDeviceManager.js");
+addFile("/MyDiv/common/ParametreOverflow.js");
 
 // MyDiv
 addFile("/MyDiv/div/MyElementDOMHtml.js");
 addFile("/MyDiv/div/MyDiv.js");
+addFile("/MyDiv/div/MyDivOption.js");
 addFile("/MyDiv/div/MyButton.js");
 addFile("/MyDiv/div/MyForm.js");
 addFile("/MyDiv/div/MyHeader.js");
@@ -34,8 +36,6 @@ addFile("/MyDiv/div/MyEmoji.js");
 addFile("/MyDiv/div/MyOnglet.js");
 
 //netword
-addFile("/MyDiv/network/Connect.js");
-addFile("/MyDiv/network/ConnexionManager.js");
 addFile("/MyDiv/network/request.js");
 addFile("/MyDiv/network/Xhr.js");
 addFile("/MyDiv/network/XhrTest.js");
@@ -54,6 +54,12 @@ addFile("/MyDiv/overlay/MyDivThumbnail.js");
 addFile("/MyDiv/overlay/MyBigOverlay.js");
 addFile("/MyDiv/overlay/MySmallThumbnailOverlay.js");
 addFile("/MyDiv/overlay/MySmallOverlay.js");
+
+//DEBUG
+addFile("/MyDiv/debug/MyDivContentError.js");
+addFile("/MyDiv/debug/MyDivError.js");
+addFile("/MyDiv/debug/MyDivContentErrorReconnect.js");
+
 // en dernier
 addFile("/MyDiv/div/MyAnchor.js");
 
