@@ -33,6 +33,8 @@ if(language.includes("fr"))
 }
 else if(language.includes("en"))
 {
+    var AutoLanguageMyDiv = {
+
           currentLanguage: "en",
           defaultOption:"...",
           headerDivError:" Error",
@@ -45,6 +47,7 @@ else if(language.includes("en"))
           cancel:"Annuler",
           delete:"Supprimer",
           deleted:"Supprimé"
+  };
 }
 else if(language.includes("it"))
 {
