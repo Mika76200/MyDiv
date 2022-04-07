@@ -1,6 +1,9 @@
 
 /*  a modifier */
-var wayRoot = '';
+if(!wayRoot)
+{
+  var wayRoot = '';
+}
 
 function addFile(wayFile)
 {
