@@ -1,5 +1,4 @@
-
-
+var NORMAL_DELAY_PUSH = 11000;
 
 function sendRequestForm(form,url,CALLBACK)
 {
@@ -53,4 +52,16 @@ function sendResquetFormReponceJson(form,url,CALLBACK)
         }
         );
         xhr.sendForm(form);
+}
+async function sendResquetFormReponceJsonAsynchrone(form,url,CALLBACK)
+{
+  var xhr = new Xhr();
+      xhr.setTimeOut(NORMAL_DELAY_PUSH);
+      xhr.setCallbackOnTimeout(()=>{console.log("Timed out.");CALLBACK();});
+      xhr.createXhrPOSTAsynchrone(url,(reponse)=>
+      {
+        CALLBACK(reponse)
+      }
+      );
+      xhr.sendForm(form);
 }

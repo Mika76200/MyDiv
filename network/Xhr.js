@@ -1,60 +1,67 @@
 
+
+var TIMEOUT = 0;
+var NOREPONSE = 1;
+
 class Xhr
 {
 
   constructor()
   {
-        this.xhr = new XMLHttpRequest();
-        this.prefixError = "/0Ex/g";
-        this.reponseJSON = "";
-        this.reponse = "";
-
-
+    this.xhr = new XMLHttpRequest();
+    this.prefixError = "/0Ex/g";
+    this.reponseJSON = "";
+    this.reponse = "";
   }
   requestSingle(url,CALLBACK)
   {
-        this.xhr.open('POST',url,false);
-        this.xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        if(CALLBACK != undefined)
-        {
-          this.addEventListener(CALLBACK,true);
-        }
-        this.xhr.send('');
+    this.xhr.open('POST',url,false);
+    this.xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    this.setCallback(CALLBACK);
+    this.addEventListener(CALLBACK,false);
+    this.xhr.send('');
   }
   requestSingleNoJson(url,CALLBACK)
   {
-        this.xhr.open('POST',url,false);
-        this.xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        if(CALLBACK != undefined)
-        {
-          this.addEventListener(CALLBACK,false);
-        }
-        this.xhr.send('');
+    this.xhr.open('POST',url,false);
+    this.xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    this.setCallback(CALLBACK);
+    this.addEventListener(CALLBACK,false);
+    this.xhr.send('');
   }
   createXhrPOST(url,synchrone,CALLBACK)
   {
-        this.xhr.open('POST',url,synchrone);
-        if(CALLBACK != undefined)
-        {
-          this.addEventListener(CALLBACK,true);
-        }
+    this.xhr.open('POST',url,synchrone);
+    this.setCallback(CALLBACK);
+    this.addEventListener(CALLBACK,true);
+  }
+   createXhrPOSTAsynchrone(url,CALLBACK)
+  {
+    this.xhr.open('POST',url,true);
+    this.setCallback(CALLBACK);
+    this.addEventListener(CALLBACK,true);
   }
   createXhrPOSTNoJson(url,synchrone,CALLBACK)
   {
-        this.xhr.open('POST',url,synchrone);
-        if(CALLBACK != undefined)
-        {
-          this.addEventListener(CALLBACK,false);
-        }
+    this.xhr.open('POST',url,synchrone);
+    this.setCallback(CALLBACK);
+    this.addEventListener(CALLBACK,false);
+  }
+  setCallback(CALLBACK)
+  {
+    if(CALLBACK == undefined)
+    {
+      alert("class xhr error CALLBACK");
+    }
   }
   createXhrPOSTObject(url,synchrone,CALLBACK)
   {
-       this.createXhrPOST(url,synchrone,CALLBACK);
-       this.xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    this.createXhrPOST(url,synchrone,CALLBACK);
+    this.xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   }
   createXhrPOSTForm(url,synchrone,CALLBACK)
   {
-       this.createXhrPOST(url,synchrone,CALLBACK);
+    this.createXhrPOST(url,synchrone,CALLBACK);
   }
   createXhrGet()
   {
@@ -62,19 +69,23 @@ class Xhr
   }
   send()
   {
-      this.xhr.send('');
+    this.xhr.send('');
   }
   sendForm(form)
   {
-      this.xhr.send(form);
+    this.xhr.send(form);
   }
   sendPost(object)
   {
-      this.xhr.send(object);
+    this.xhr.send(object);
   }
   setTimeOut(time)
   {
-      this.xhr.timeout = time; //  10000ms La requête se terminera si elle n'a pas abouti au bout de 10 secondes
+    this.xhr.timeout = time; //  10000ms La requête se terminera si elle n'a pas abouti au bout de 10 secondes
+  }
+  setCallbackOnTimeout(CALLBACK)
+  {
+    this.xhr.ontimeout = CALLBACK;
   }
   addEventListener(CALLBACK,isJson)
   {

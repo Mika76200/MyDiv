@@ -1,6 +1,10 @@
+
+/*  a modifier */
+var wayRoot = '';
+
 function addFile(wayFile)
 {
-  document.write('<script type="text/JavaScript" src="'+wayFile+'"></script>');
+  document.write('<script type="text/JavaScript" src="'+wayRoot+wayFile+'"></script>');
 }
 // common
 addFile("/MyDiv/autolanguage/AutoLanguageMyDiv.js");
@@ -8,6 +12,7 @@ addFile("/MyDiv/common/module.js");
 addFile("/MyDiv/common/color.js");
 addFile("/MyDiv/common/config.js");
 addFile("/MyDiv/common/MyEvent.js");
+addFile("/MyDiv/common/MyRef.js");
 addFile("/MyDiv/common/MyScreemManager.js");
 addFile("/MyDiv/common/MyDeviceManager.js");
 addFile("/MyDiv/common/ParametreOverflow.js");
