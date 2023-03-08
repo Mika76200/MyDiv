@@ -1,4 +1,3 @@
-
 // math
 function pourCent(pourCent,toNumber)
 {
@@ -12,26 +11,24 @@ function pourCent(pourCent,toNumber)
 function isEmpty(objetArray)
 {
 
-	if(objetArray != undefined)
+	if(isExist(objetArray))
 	{
 		if(objetArray.length <= 0 || objetArray.length === undefined || objetArray === "")
 		{
 		   return true;
 		}
-		return false;
 	}
-	return true;
-
+	return false;
 }
-isExist(object)
+function isExist(object)
 {
-	if(typeof object != "undefined")
-	{
+		if(object != undefined)
+		{
 	  return true;
 	}
 	return false;
 }
-isArray(object)
+function isArray(object)
 {
 		if (typeof object === "array") {
 	  return true;

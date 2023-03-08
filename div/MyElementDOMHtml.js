@@ -48,6 +48,10 @@ class MyElementDOMHtml extends MyEvent
 		{
 			this.element.className = name;
 		}
+		getCountChild()
+		{
+			return this.element.childElementCount;
+		}
 		hasChildNodes()
 		{
 			return this.element.hasChildNodes();
@@ -598,12 +602,14 @@ class MyElementDOMHtml extends MyEvent
 		{
 			return new Size(this.h(),this.w());
 		}
+
 		getPosition()
 		{
 			return new Coordinate2D(this.offsetLeft(),this.offsetTop());
 		}
 		getPositionToScroll(divScroll,divParentToImage)
 		{
+
 			return new Coordinate2D(this.offsetLeft() - divParentToImage.element.scrollLeft - divScroll.element.scrollLeft,
 																			this.offsetTop()- divParentToImage.element.scrollTop - divScroll.element.scrollTop);
 		}
