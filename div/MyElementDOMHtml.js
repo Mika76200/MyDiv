@@ -598,14 +598,12 @@ class MyElementDOMHtml extends MyEvent
 		{
 			return new Size(this.h(),this.w());
 		}
-
 		getPosition()
 		{
 			return new Coordinate2D(this.offsetLeft(),this.offsetTop());
 		}
 		getPositionToScroll(divScroll,divParentToImage)
 		{
-
 			return new Coordinate2D(this.offsetLeft() - divParentToImage.element.scrollLeft - divScroll.element.scrollLeft,
 																			this.offsetTop()- divParentToImage.element.scrollTop - divScroll.element.scrollTop);
 		}
@@ -616,5 +614,13 @@ class MyElementDOMHtml extends MyEvent
 		getRect()
 		{
 			return new Rectangle(this.offsetLeft(),this.offsetTop(),this.h(),this.w(),this.t(),this.b());
+		}
+		static elementDOMExist(id)
+		{
+			if(!document.getElementById(id))
+			{
+				return false;
+			}
+			return true;
 		}
 };

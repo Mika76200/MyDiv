@@ -25,7 +25,8 @@ function isEmpty(objetArray)
 }
 isExist(object)
 {
-		if (typeof object != "undefined") {
+	if(typeof object != "undefined")
+	{
 	  return true;
 	}
 	return false;
