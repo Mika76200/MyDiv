@@ -35,3 +35,10 @@ function isArray(object)
 	}
 	return false;
 }
+function removeInArrayByValue(array,objectSearch)
+{
+	var filtered = array.filter(function(value, index, arr){
+		 return value != 'duck';
+ });
+ return filtered;
+}
