@@ -38,7 +38,15 @@ function isArray(object)
 function removeInArrayByValue(array,objectSearch)
 {
 	var filtered = array.filter(function(value, index, arr){
-		 return value != 'duck';
+		 return value != objectSearch;
  });
  return filtered;
+}
+function inArray(array,objectSearch,keys)
+{
+	if(array[keys] === objectSearch)
+	{
+		return true;
+	}
+	return false;
 }
