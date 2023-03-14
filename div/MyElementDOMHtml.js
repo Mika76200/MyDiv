@@ -365,6 +365,10 @@ class MyElementDOMHtml extends MyEvent
 			if(T)this.element.style.marginTop =T+"px";
 			if(B)this.element.style.marginBottom =B+"px";
 		}
+		setMarginLeft(L)
+		{
+			if(T)this.element.style.marginLeft =L+"px";
+		}
 		setMarginTop(T)
 		{
 			if(T)this.element.style.marginTop =T+"px";
