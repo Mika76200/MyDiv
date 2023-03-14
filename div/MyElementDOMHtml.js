@@ -494,7 +494,6 @@ class MyElementDOMHtml extends MyEvent
 		{
 			this.element.style.color = color;
 		}
-
 		setAlignSelf(justify)
 		{
 			this.element.style.alignSelf  = justify;
