@@ -490,13 +490,18 @@ class MyElementDOMHtml extends MyEvent
 		{
 			this.element.style.color = color;
 		}
+		setColorText(color)
+		{
+			this.element.style.color = color;
+		}
+
 		setAlignSelf(justify)
 		{
 			this.element.style.alignSelf  = justify;
 		}
-		setTextAlign(align)
+		setTextDecoration(d)
 		{
-			this.element.style.textAlign   = align;
+			this.element.style.textDecoration = d;
 		}
 		setFlex(mode)
 		{
