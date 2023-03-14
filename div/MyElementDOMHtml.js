@@ -504,7 +504,7 @@ class MyElementDOMHtml extends MyEvent
 		}
 		setTextDecoration(d)
 		{
-			this.element.style.textAlign   = align;
+			this.element.style.textDecoration   = d;
 		}
 		setFlex(mode)
 		{
