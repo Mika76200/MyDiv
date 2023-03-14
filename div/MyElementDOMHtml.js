@@ -367,7 +367,7 @@ class MyElementDOMHtml extends MyEvent
 		}
 		setMarginLeft(L)
 		{
-			if(T)this.element.style.marginLeft =L+"px";
+			if(L)this.element.style.marginLeft =L+"px";
 		}
 		setMarginTop(T)
 		{
