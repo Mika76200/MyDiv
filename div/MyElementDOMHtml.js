@@ -498,6 +498,10 @@ class MyElementDOMHtml extends MyEvent
 		{
 			this.element.style.alignSelf  = justify;
 		}
+		setTextAlign(align)
+		{
+			this.element.style.textAlign   = align;
+		}
 		setTextDecoration(d)
 		{
 			this.element.style.textDecoration = d;
