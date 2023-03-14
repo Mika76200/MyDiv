@@ -44,9 +44,17 @@ function removeInArrayByValue(array,objectSearch)
 }
 function inArray(array,objectSearch,keys)
 {
-	if(array[keys] === objectSearch)
+	if(isExist(array) && isExist(objectSearch) && isExist(keys))
 	{
-		return true;
+		if(array[keys] === objectSearch)
+		{
+			return true;
+		}
+		return false;
 	}
-	return false;
+	else
+	{
+		console.error('error variable ');
+		return false
+	}
 }
