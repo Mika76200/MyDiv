@@ -42,19 +42,24 @@ function removeInArrayByValue(array,objectSearch)
  });
  return filtered;
 }
-function inArray(array,objectSearch,keys)
+function inArray(array,objectSearch)
 {
-	if(isExist(array) && isExist(objectSearch) && isExist(keys))
+	if(!isExist(array) && !isExist(objectSearch))
 	{
-		if(array[keys] === objectSearch)
+		console.error('error variable ');
+		return false;
+	}
+
+	for (var property in array)
+	{
+		if(typeof array[property] ==='object' || typeof array[property] === 'array')
+		{
+			return inArray(array[property],objectSearch);
+		}
+		else if(array[property] === objectSearch)
 		{
 			return true;
 		}
-		return false;
 	}
-	else
-	{
-		console.error('error variable ');
-		return false
-	}
+	return false;
 }
