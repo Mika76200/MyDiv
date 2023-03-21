@@ -256,11 +256,11 @@ class MyElementDOMHtml extends MyEvent
 		{
 			if(h)this.element.style.height = h +"%";
 		}
-		setHeight(w)
+		setWidth(w)
 		{
 			if(w)this.element.style.width =  w +"px";
 		}
-		setHeightPourCent(w)
+		setWidthPourCent(w)
 		{
 			if(w)this.element.style.width =  w +"%";
 		}
