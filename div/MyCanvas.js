@@ -4,12 +4,13 @@ class MyCanvas extends MyElementDOMHtml
 {
   constructor(id,h,w,color)
   {
+    super();
     this.color = color;
-    this.canvas = document.createElement('canvas');
-    this.canvas.id = "c1"+id;
-    this.ctx = this.canvas.getContext('2d');
-    this.canvas.style.height = h;
-    this.canvas.style.width = w;
+    this.element = document.createElement('canvas');
+    this.element.id = "c1"+id;
+    this.ctx = this.element.getContext('2d');
+    this.element.style.height = h;
+    this.element.style.width = w;
 
   }
   CreateToDomElement(newID,elemmentDOM)
