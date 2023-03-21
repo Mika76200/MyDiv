@@ -20,8 +20,8 @@ class MyCanvas extends MyElementDOMHtml
       return false;
     }
     this.element = elemmentDOM;
-    this.element.id = "c1"newID;
-    return true
+    this.element.id = "c1"+newID;
+    return true;
   }
   setPoint()
   {
