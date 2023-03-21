@@ -248,6 +248,22 @@ class MyElementDOMHtml extends MyEvent
 		{
 			this.elementParent = E;
 		}
+		setHeight(h)
+		{
+			if(h)this.element.style.height = h +"px";
+		}
+		setHeightPourCent(h)
+		{
+			if(h)this.element.style.height = h +"%";
+		}
+		setHeight(w)
+		{
+			if(w)this.element.style.width =  w +"px";
+		}
+		setHeightPourCent(w)
+		{
+			if(w)this.element.style.width =  w +"%";
+		}
 		setSize(h,w)
 		{
 			if(h)this.element.style.height = h +"px";
