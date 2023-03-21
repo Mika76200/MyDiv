@@ -45,6 +45,6 @@ class MyCanvas extends MyElementDOMHtml
   }
   getElement()
   {
-    return this.canvas;
+    return this.element;
   }
 }
