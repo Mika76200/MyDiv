@@ -7,7 +7,7 @@ class MyCanvas extends MyElementDOMHtml
     super();
     this.color = color;
     this.element = document.createElement('canvas');
-    this.element.id = "c1"+id;
+    this.element.id = id;
     this.ctx = this.element.getContext('2d');
     this.element.style.height = h;
     this.element.style.width = w;
@@ -17,11 +17,12 @@ class MyCanvas extends MyElementDOMHtml
   {
     if(!elemmentDOM)
     {
-      console.log('elemmentDOM canvas est null');
+      console.log('elemmentDOM canvas est null ID: '+newID);
       return false;
     }
     this.element = elemmentDOM;
-    this.element.id = "c1"+newID;
+    this.element.id = newID;
+    this.ctx = this.element.getContext('2d');
     return true;
   }
   setPoint()

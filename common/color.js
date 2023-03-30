@@ -15,6 +15,10 @@ class Color
 			this.T= 1;
 		}
 	}
+	getColorDefault()
+	{
+		return 'inherit';
+	}
 	getColor()
 	{
 		return 'rgb('+this.R+','+this.B+','+this.G+','+this.T+')';
@@ -36,6 +40,7 @@ class Color
 
 }
 
+var MyColorDefault = new Color();
 var MyColorRed = new Color(255, 0, 0);
 var MyColorViolet = new Color(255, 0, 255);
 var MyColorBleu = new Color(0, 51, 255);

@@ -35,12 +35,40 @@ function isArray(object)
 	}
 	return false;
 }
-function removeInArrayByValue(array,objectSearch)
+function removeInArrayByValue(array,objectSearch,valueSearch)
 {
-	var filtered = array.filter(function(value, index, arr){
-		 return value != objectSearch;
- });
- return filtered;
+		var result = new Array();
+
+				for(var i = 0; i < array.length; i++)
+				{
+					if(inArrayByKeysValue(array[i],objectSearch,valueSearch))
+					{
+						result.push(array[i]);
+					}
+				}
+
+ 	return result;
+}
+function inArrayByKeysValue(array,objectSearch,valueSearch)
+{
+
+	const arraykeys = Object.keys(array);
+	for (var property in array)
+	{
+		if(typeof array[property] === 'array' || typeof array[property] === 'object')
+		{
+			return removeInArrayByValue(array[property]);
+		}
+		else if(arraykeys[property] === objectSearch && array[property] != valueSearch)
+		{
+			return true;
+		}
+		else
+		{
+			/// rien
+		}
+	}
+	return false;
 }
 function inArray(array,objectSearch)
 {
@@ -62,4 +90,14 @@ function inArray(array,objectSearch)
 		}
 	}
 	return false;
+}
+function convertObjectToArray(obj)
+{
+	const array = Object.entries(obj);
+	return array;
+}
+function convertArrayToObject(array)
+{
+	const obj = Object.fromEntries(array);
+	return obj;
 }

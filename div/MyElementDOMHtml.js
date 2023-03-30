@@ -15,7 +15,7 @@ class MyElementDOMHtml extends MyEvent
 		{
 			if(!elemmentDOM)
 			{
-				console.log('elemmentDOM est null');
+				console.log('elemmentDOM est null ID: '+newID);
 				return false;
 			}
 			this.element = elemmentDOM;
