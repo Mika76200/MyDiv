@@ -24,6 +24,7 @@ addFile("/MyDiv/common/ParametreOverflow.js");
 addFile("/MyDiv/div/MyElementDOMHtml.js");
 addFile("/MyDiv/div/MyCanvas.js");
 addFile("/MyDiv/div/MyDiv.js");
+addFile("/MyDiv/div/MyDivCanvas.js");
 addFile("/MyDiv/div/MyDivOption.js");
 addFile("/MyDiv/div/MyButton.js");
 addFile("/MyDiv/div/MyForm.js");
