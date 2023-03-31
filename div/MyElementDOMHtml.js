@@ -48,22 +48,7 @@ class MyElementDOMHtml extends MyEvent
 		{
 			this.element.className = name;
 		}
-		getCountChild()
-		{
-			return this.element.childElementCount;
-		}
-		hasChildNodes()
-		{
-			return this.element.hasChildNodes();
-		}
-		removeChild(childElement)
-		{
-				this.element.removeChild(childElement);
-		}
-		getChildNodes()
-		{
-			return this.element.childNodes;
-		}
+
 		inserDivElementDOM(elementDOM,justify)
 		{
 			if(!justify)
@@ -135,6 +120,24 @@ class MyElementDOMHtml extends MyEvent
 		{
 				this.inserElementDOM(div.getElement(),justify);
 		}
+		///////////////////
+		// CHILD
+		getCountChild()
+		{
+			return this.element.childElementCount;
+		}
+		hasChildNodes()
+		{
+			return this.element.hasChildNodes();
+		}
+		removeChild(childElement)
+		{
+				this.element.removeChild(childElement);
+		}
+		getChildNodes()
+		{
+			return this.element.childNodes;
+		}
 		removeFirstChild()
 		{
 			if(this.hasChildNodes())
@@ -163,10 +166,10 @@ class MyElementDOMHtml extends MyEvent
 			{
 					var output = this.element;
 					var child  = output.lastChild;
-					console.log(child);
 							output.removeChild(child);
 			}
 		}
+		//
 		show()
 		{
 			this.element.style.display = "flex";
